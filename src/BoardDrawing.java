@@ -10,6 +10,13 @@ import javax.swing.JPanel;
 //note: board does not change dynamically 
 //note: board shape and window aesthetics to be set
 //note: unification of colors not done
+
+/**
+ * BoardDrawing esta es la clase BoardDrawing
+ * @version v1.0
+ * @author Domingo Fernandez Lopez
+ * @see JPanel
+ */
 public class BoardDrawing extends JPanel {
 
     /**
@@ -25,7 +32,13 @@ public class BoardDrawing extends JPanel {
     BoardScreen bs;
     //ArrayList<Portal> portals;
     //ArrayList<Player> players;
-
+    
+    /**
+     * BoardDrawing este es el metodo BoardDrawing
+     * @param row fila
+     * @param col columna
+     * @param bs BoardScreen
+     */
     public BoardDrawing(int row, int col, BoardScreen bs) {
         this.bs = bs;
 
@@ -65,6 +78,10 @@ public class BoardDrawing extends JPanel {
 
     }
 
+    /**
+     * paintComponent este es el metodo paintComponent
+     * @param g Graphics
+     */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;//.create();
@@ -172,6 +189,14 @@ public class BoardDrawing extends JPanel {
 
     }
 
+    /**
+     * 
+     * @param g2d Graphics2D
+     * @param pl int
+     * @param cell Rectangle
+     * @param cellWidth int 
+     * @param cellHeight int
+     */
     private void changePlayerColor(Graphics2D g2d, int pl, Rectangle cell, int cellWidth, int cellHeight) {
         //only one player considered here
 
@@ -180,14 +205,13 @@ public class BoardDrawing extends JPanel {
         g2d.setColor(Color.blue);
     }
 
-    /*
-	public void ensurePlayerPosition(){
-		for(Portal port :portals){
-			if(player == port.returnStart())
-				player = port.returnEnd();
-		}
-	}
-     */
+   
+   
+   /**
+    * ensurePlayerPosition este es el nombre del metodo ensurePlayerPosition
+    * @param pnos int 
+    * @return String
+    */
     public String ensurePlayerPosition(int pnos) {
         String message = "";
         for (Portal port : bs.portals) {
@@ -203,11 +227,11 @@ public class BoardDrawing extends JPanel {
         return message;
     }
 
-    /*
-	public void setPlayer(int a){
-		player = a;
-	}
-     */
+    /**
+     * setPlayer este es el nombre del metodo setPlayer
+     * @param a int
+     * @param pnos int
+     */    
     public void setPlayer(int a, int pnos) {
         bs.players.get(pnos).incPosition(a);
     }

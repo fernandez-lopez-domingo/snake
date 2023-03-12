@@ -11,6 +11,12 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+/**
+ * BoardScreen esta es la clase BoardScreen
+ * @version v1.0
+ * @author Domingo Fernandez Lopez
+ * @see JPanel
+ */
 public class BoardScreen extends JPanel {
 
     /**
@@ -36,25 +42,42 @@ public class BoardScreen extends JPanel {
     JButton go;
     JButton quit;
 
+    /**
+     * 
+     */
     public void quitButtonActionListener() {
         if (JOptionPane.showConfirmDialog(this, "Are you sure?") == JOptionPane.OK_OPTION) {
             System.exit(0);
         }
     }
 
+    /**
+     * 
+     */
     public void goButtonActionListener() {
         mw.showCard("Two");
         mw.resetAll();
     }
 
+    /**
+     * 
+     * @param m int
+     */
     public void setMaxPlayers(int m) {
         maxPlayers = m;
     }
 
+    /**
+     * 
+     * @return int
+     */
     public int returnMaxPlayers() {
         return maxPlayers;
     }
 
+    /**
+     * 
+     */
     public void setUpPlayers() {
         players = new ArrayList<>();
         for (int i = 0; i < returnMaxPlayers(); i++) {
@@ -75,6 +98,10 @@ public class BoardScreen extends JPanel {
 
     }
 
+    /**
+     * 
+     * @param mw MainWindow
+     */
     public BoardScreen(MainWindow mw) {
         this.mw = mw;
 

@@ -1,10 +1,15 @@
 
 import javax.swing.SwingUtilities;
 
+/**
+ * Main esta es la clase Main
+ * @version v1.0
+ * @author Domingo Fernandez Lopez
+ */
 public class Main {
 
     /**
-     * @param args
+     * @param args String[]
      */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {

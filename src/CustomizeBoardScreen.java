@@ -8,20 +8,36 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 //needs massive improvements
+/**
+ * CustomizeBoardScreen esta es la clase CustomizeBoardScreen
+ * @version v1.0
+ * @author Domingo Fernandez Lopez
+ * @see JPanel
+ */
 public class CustomizeBoardScreen extends JPanel {
 
     JButton go;
     JButton quit;
     MainWindow mw;
 
+    /**
+     * 
+     */
     public void quitButtonActionListener() {
         mw.showCard("Two");
     }
 
+    /**
+     * 
+     */
     public void goButtonActionListener() {
         mw.showCard("Four");
     }
 
+    /**
+     * 
+     * @param mw MainWindow
+     */
     public CustomizeBoardScreen(MainWindow mw) {
         this.mw = mw;
 

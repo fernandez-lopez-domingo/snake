@@ -9,6 +9,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/**
+ * MainWindow esta es la clase MainWindow
+ * @version v1.0
+ * @author Domingo Fernandez Lopez
+ * @see JFrame
+ */
 public class MainWindow extends JFrame {
 
     JPanel cards;
@@ -20,10 +26,17 @@ public class MainWindow extends JFrame {
     CustomizeBoardScreen s3;
     BoardScreen s4;
 
+    /**
+     * 
+     * @param cardName String
+     */
     public void showCard(String cardName) {
         cl.show(cards, cardName);
     }
 
+    /**
+     * 
+     */
     public void resetAll() {
         s1 = new WelcomeScreen(this);
         s2 = new PlayerSelectScreen(this);
@@ -37,11 +50,17 @@ public class MainWindow extends JFrame {
     }
 
     //maintaining board info
+    /**
+     * 
+     */
     public void setBoard() {
         s4 = new BoardScreen(this);
         cards.add(s4, "Four");
     }
 
+    /**
+     * 
+     */
     public MainWindow() {
 
         setVisible(true);
